@@ -14,11 +14,12 @@ class MooreMachine:
     def inputTransition(self, inp):
         self._state = self.inTransition[self._state][inp]
 
-    def outputTransition(self, inp):
-        self._output = self._output + self.outTransition[self._state][inp]
+    def outputTransition(self):
+        self._output = self._output + self.outTransition[self._state]
 
     def getState(self):
         return self._state
 
     def input(self, inp):
         self.inputTransition(inp)
+        self.outputTransition()
