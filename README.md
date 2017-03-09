@@ -29,6 +29,7 @@ ToC_Assignement1
   + `5¢`
   + `10¢`
   + `15¢`
-+ Input symbols are : *5, 10 *
++ Input symbols are : `5`, `10`
 + Final State: `15¢`
 + Final Condition: Output string should contain at least one '1'.
++ Program exits after seeing '1' at the last position of output string.
