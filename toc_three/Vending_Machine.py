@@ -2,7 +2,7 @@ from Moore_Machine import MooreMachine
 
 name = "15¢Vendor"
 states = ('0', '5', '10', '15')
-inAlphabet = ('5', '0')
+inAlphabet = ('5', '10')
 outAlphabet = ('0', '1')
 
 inTransition = {
@@ -23,7 +23,19 @@ initState = '0'
 
 vm = MooreMachine(name, states, inAlphabet, outAlphabet, inTransition, outTransition, initState)
 
-vm.input('5')
-print(vm.getOutput())
-vm.input('10')
-print(vm.getOutput())
+# Driver program part
+
+def getInput(num):
+    num = num % len(inAlphabet)
+    return inAlphabet[num]
+
+output = ""
+
+while(True):
+    inp = int(input("0: '5', 1: '10' \n"))
+    vm.input(getInput(inp))
+    output = vm.getOutput()
+    print("Output : "+output)
+    if(output[len(output)-1] == '1'): break
+
+print("Enjoy the coffee")
