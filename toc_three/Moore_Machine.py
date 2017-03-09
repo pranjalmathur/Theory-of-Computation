@@ -19,6 +19,9 @@ class MooreMachine:
 
     def getState(self):
         return self._state
+    
+    def getOutput(self):
+        return self._output
 
     def input(self, inp):
         self.inputTransition(inp)

@@ -12,7 +12,7 @@ inTransition = {
     'd' : {'0' : 'd', '1' : 'd'}
 }
 
-outTrasition = {
+outTransition = {
     'a' : 'x2',
     'b' : 'x1',
     'c' : 'x2',
@@ -22,3 +22,9 @@ outTrasition = {
 initState = 'a'
 
 vm = MooreMachine(name, states, inAlphabet, outAlphabet, inTransition, outTransition, initState)
+
+vm.input('1')
+
+print("State : " + vm.getState())
+# vm.input('0')
+print("Output : "+vm.getOutput())
