@@ -1,2 +1,4 @@
 *.pyc
-./toc_three/__pycache__/*
+toc_three/__pycache__/*
+*/.vscode/*
+toc_three/Vending_Machine_try.py
