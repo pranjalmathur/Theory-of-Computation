@@ -4,7 +4,15 @@ ToC_Assignement1
 
 ## Question 1
 
+**Problem statement:** *Substring matching*
 
+**Language**: *Java* 
+
+**Description:**
+
++ Realtime DFA/Transition table formation.
++ Use Knuth-Morris-Pratt construction algorithm
++ Returns Found/ Not Found based on the criteria.
 
 
 
