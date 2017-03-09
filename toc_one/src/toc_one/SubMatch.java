@@ -47,18 +47,25 @@ public class SubMatch {
     }
 
     public static void search(String string) {
-        int i, j;
+        int i, j, m = -1;
         int N = string.length();
         for (i = 0, j = 0; i < N && j < lenPattern; i++) {
             j = DFA[string.charAt(i)][j];
+
+            if (j == lenPattern) {
+                // pattern found
+
+                System.out.println("Found at index " + Math.abs(i - lenPattern + 1));
+                j = 0;
+                m++;
+
+            }
         }
-        if (j == lenPattern) {
-            // pattern found
-            System.out.println("Found");
-        } else {
-            // pattern not found
+        if (m == -1) // pattern not found
+        {
             System.out.println("Not Found");
         }
+
     }
 
     public static void main(String[] args) {
