@@ -43,3 +43,50 @@ def parse_postfix(regex):
         print('Something happened. Not working')
     e.connect_to(MATCHSTATE)
     return e
+
+# Defines the transition arrow to next state
+class Next(object):
+    def __init__(self):
+        self.next = None
+
+# Defines the state with at max 2 outgoing arrows
+class State(object):
+    Char, Switch, End = range(3)
+
+    def __init__(self):
+        self.char = None
+        self.type = None
+        self.out1 = Next()
+        self.out2 = Next()
+
+    @staticmethod
+    def createChar(c):
+        s = State()
+        s.type = State.Char
+        s.char = c
+        return s
+
+    @staticmethod
+    def createSwitch():
+        s = State()
+        s.type = State.Switch
+        return s
+
+    @staticmethod
+    def createMatch():
+        s = State()
+        s.type = State.End
+        return s
+
+    def __str__(self):
+        if self.type == State.End:
+            return 'MATCHSTATE'
+        elif self.type == State.Char:
+            return 'CHAR(' + self.char + ')'
+        elif self.type == State.Switch:
+            return 'SWITCH'
+
+MATCHSTATE = State.createMatch()
+
+
+    
