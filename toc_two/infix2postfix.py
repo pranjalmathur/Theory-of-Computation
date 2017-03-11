@@ -89,4 +89,36 @@ class State(object):
 MATCHSTATE = State.createMatch()
 
 
-    
+# Defines the smalles fragment in thompson's algorithm
+class Fragment(object):
+    def __init__(self, state, outs):
+        self.start = state
+        self.outs = outs
+
+    def connect_to(self, state):
+        for o in self.outs:
+            o.next = state
+
+    def print_self(self):
+        print self.start
+        for o in self.outs:
+            print o.next
+
+# Holds the list of states in te given nfa
+class StateList(object):
+    def __init__(self):
+        self.states = {}
+
+    def isMatch(self):
+        return any(s == MATCHSTATE for s in self.states)
+
+    def clear(self):
+        self.states = {}
+
+    def addState(self, state):
+        if state == None or state in self.states:
+            return
+        self.states[state] = True
+        if state.type == State.Switch:
+            self.addState(state.out1.next)
+            self.addState(state.out2.next)
