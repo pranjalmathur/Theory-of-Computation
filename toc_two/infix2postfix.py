@@ -122,3 +122,27 @@ class StateList(object):
         if state.type == State.Switch:
             self.addState(state.out1.next)
             self.addState(state.out2.next)
+
+
+
+def match(regex, string):
+     print("String = '%s', RegEx = '%s'", string, regex)
+    fragment = parse_postfix(regex)
+    clist = StateList()
+    nlist = StateList()
+    clist.addState(fragment.start)
+     print("Matching string")
+    for i, c in enumerate(string):
+        step(clist, nlist, c)
+        clist, nlist = nlist, clist
+    return clist.isMatch()
+
+def step(clist, nlist, c):
+    nlist.clear()
+    for state in clist.states:
+        if state.char == c:
+            nlist.addState(state.out1.next)
+
+
+if __name__=="__main__":
+    match(raw_input(),raw_input())
