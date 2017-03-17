@@ -13,6 +13,7 @@ ToC_Assignment1
 + Realtime DFA/Transition table formation.
 + Use Knuth-Morris-Pratt construction algorithm
 + Returns Found/ Not Found based on the criteria.
+> Example implementation and pseudo code: http://people.cs.pitt.edu/~aus/cs1501/KMP_algorithm.pdf
 
 
 
