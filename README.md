@@ -1,8 +1,16 @@
+## CSD303 - Theory Of Computation - Assignment 1
 
-ToC_Assignment1
-===
+- Group Name: 
+- Group Members
+  - Pranjal Mathur - [github@pranjalmathur](https://github.com/pranjalmathur/)
+  - Vishal Gauba - [github@flamefractal](https://github.com/flamefractal/)
+  - Saketh Vallakatla - [github@saketh21v](https://github.com/saketh21v/)
+- Modules left:
+  - thompson nfa debug (not working yet)
 
-## Question 1
+
+
+### Question 1
 
 **Problem statement:** *Substring matching*
 
@@ -17,7 +25,23 @@ ToC_Assignment1
 
 
 
-## Question 3
+### Question 2
+
+**Problem statement:** *RegEx matching using Thompson NFA*
+
+**Language**: *Python* 
+
+**Description:**
+
+- Infix to Postfix conversion .
+- Create small fragments using Thompson's algorithm and joins them
+- Matches the input string and returns if matched
+
+> Example code: https://swtch.com/~rsc/regexp/nfa.c.txt
+
+
+
+### Question 3
 
 **Problem statement:** *Vending machine implementation with Moore Machine*
 
