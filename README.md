@@ -19,8 +19,9 @@
 **Description:**
 
 + Realtime DFA/Transition table formation.
-+ Use Knuth-Morris-Pratt construction algorithm
-+ Returns Found/ Not Found based on the criteria.
++ Use Knuth-Morris-Pratt construction algorithm to search for the strings
++ Returns Found (along with the index number)/ Not Found based on the criteria.
++ Program ends when user input `END` as the string
 > Example implementation and pseudo code: http://people.cs.pitt.edu/~aus/cs1501/KMP_algorithm.pdf
 
 
