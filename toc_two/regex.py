@@ -126,12 +126,12 @@ class StateList(object):
 
 
 def match(regex, string):
-     print("String = '%s', RegEx = '%s'", string, regex)
+    print("String = '%s', RegEx = '%s'", string, regex)
     fragment = parse_postfix(regex)
     clist = StateList()
     nlist = StateList()
     clist.addState(fragment.start)
-     print("Matching string")
+    print("Matching string")
     for i, c in enumerate(string):
         step(clist, nlist, c)
         clist, nlist = nlist, clist
@@ -145,4 +145,4 @@ def step(clist, nlist, c):
 
 
 if __name__=="__main__":
-    match(raw_input(),raw_input())
+    print(match(raw_input(),raw_input()))
