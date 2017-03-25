@@ -1,10 +1,10 @@
 ## CSD303 - Theory Of Computation - Assignment 1
 
-- Group Name: 
+- Group Name: TBD 
 - Group Members
-  - Pranjal Mathur - [github@pranjalmathur](https://github.com/pranjalmathur/)
-  - Vishal Gauba - [github@flamefractal](https://github.com/flamefractal/)
-  - Saketh Vallakatla - [github@saketh21v](https://github.com/saketh21v/)
+  - Pranjal Mathur (1410110296) - [github@pranjalmathur](https://github.com/pranjalmathur/)
+  - Vishal Gauba (1410110501) - [github@flamefractal](https://github.com/flamefractal/)
+  - Saketh Vallakatla (1410110352) - [github@saketh21v](https://github.com/saketh21v/)
 - Modules left:
   - thompson nfa debug (not working yet)
 
